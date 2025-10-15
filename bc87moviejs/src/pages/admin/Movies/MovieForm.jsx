@@ -22,7 +22,7 @@ export default function MovieForm() {
   const [preview, setPreview] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Load thông tin phim
+  // Nếu là chế độ "Edit" thì load thông tin phim
   useEffect(() => {
     const fetchMovie = async () => {
       if (!maPhim) return;

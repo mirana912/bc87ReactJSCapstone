@@ -52,7 +52,7 @@ export default function AdminPage() {
 
       {/* Chi tiết phim */}
       <Route
-        path="movies/detail/:id"
+        path="movies/:id"
         element={
           <PrivateRoute>
             <AdminLayout>

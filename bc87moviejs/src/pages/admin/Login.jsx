@@ -18,7 +18,7 @@ export default function Login() {
     const result = await dispatch(login({ taiKhoan, matKhau }));
 
     if (login.fulfilled.match(result)) {
-      // Kiểm tra an toàn cho dữ liệu trả về
+      // ✅ Kiểm tra an toàn cho dữ liệu trả về
       const userData =
         result?.payload?.content || result?.payload || result?.user || {};
 

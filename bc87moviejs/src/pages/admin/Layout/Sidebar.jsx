@@ -7,7 +7,7 @@ const menu = [
   { to: "/admin/users", icon: <Users />, label: "Users" },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ onLogout }) {
   return (
     <div className="h-screen w-64 bg-slate-900 text-white flex flex-col p-4 shadow-lg">
       <div className="text-2xl font-bold mb-8 text-center tracking-wide">
@@ -32,7 +32,7 @@ export default function Sidebar() {
         ))}
       </nav>
       <button
-        hidden
+        onClick={onLogout}
         className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-fuchsia-300 transition"
       >
         <LogOut className="w-5 h-5" /> Logout

@@ -1,14 +1,10 @@
-import { useSelector } from "react-redux";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-export default function PrivateRoute({ children }) {
-  const token = useSelector((state) => state.auth.token);
-  const location = useLocation();
+const PrivateRoute = ({ children }) => {
+  // Check userToken thay vì isAuthenticated
+  const token = localStorage.getItem("userToken");
 
-  if (!token) {
-    // Nếu chưa đăng nhập thì chuyển về /admin (trang login)
-    return <Navigate to="/admin" state={{ from: location }} replace />;
-  }
+  return token ? children : <Navigate to="/" replace />;
+};
 
-  return children;
-}
+export default PrivateRoute;
