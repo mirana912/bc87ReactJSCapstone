@@ -1,20 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import Welcome from "./pages/welcome/index";
-import ClientPage from "./pages/client/index";
 import AdminPage from "./pages/admin/index";
 import MovieForm from "./pages/admin/Movies/MovieForm";
 import MovieList from "./pages/admin/Movies/MovieList";
+import App from "../../src/App";
 
-export default function App() {
+export default function MainApp() {
   return (
     <Routes>
-      {/* Trang chào mừng */}
+      {/* Welcome Page */}
       <Route path="/" element={<Welcome />} />
 
-      {/* Trang client */}
-      <Route path="/client/*" element={<ClientPage />} />
+      {/* Client Page */}
+      <Route path="/client/*" element={<App />} />
 
-      {/* Trang admin */}
+      {/* Admin Page */}
       <Route path="/admin/*" element={<AdminPage />} />
       <Route path="/admin/movies" element={<MovieList />} />
       <Route path="/admin/movies/add" element={<MovieForm />} />
