@@ -16,7 +16,7 @@ export default function Users() {
   });
   const [isEdit, setIsEdit] = useState(false);
 
-  // Lấy danh sách người dùng
+  // 📥 Lấy danh sách người dùng
   const fetchUsers = async () => {
     try {
       const res = await userService.getAll(keyword);
@@ -30,7 +30,7 @@ export default function Users() {
     fetchUsers();
   }, [keyword]);
 
-  // Mở modal thêm/sửa
+  // 🧩 Mở modal thêm/sửa
   const openModal = (user = null) => {
     if (user) {
       setFormData(user);
@@ -49,7 +49,7 @@ export default function Users() {
     setShowModal(true);
   };
 
-  // Thêm hoặc cập nhật người dùng
+  // 🚀 Thêm hoặc cập nhật người dùng
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -68,7 +68,7 @@ export default function Users() {
     }
   };
 
-  // Xóa người dùng
+  // ❌ Xóa người dùng
   const handleDelete = async (taiKhoan) => {
     const confirm = await Swal.fire({
       title: "Xác nhận xóa?",

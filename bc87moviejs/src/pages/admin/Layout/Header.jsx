@@ -16,11 +16,12 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-md px-6 py-4 flex justify-between">
+    <header className="bg-white shadow-md px-6 py-4 flex justify-center items-center">
       <h1 className="text-xl font-bold text-gray-800">Trang quản trị</h1>
       <button
+        hidden
         onClick={handleLogout}
-        className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-md transition-all items-left"
+        className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-md transition-all"
       >
         Đăng xuất
       </button>

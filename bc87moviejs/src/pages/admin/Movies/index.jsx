@@ -11,7 +11,7 @@ export default function Movies() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Lấy danh sách phim
+  // ✅ Lấy danh sách phim
   const fetchMovies = async () => {
     setLoading(true);
     try {
@@ -30,7 +30,7 @@ export default function Movies() {
     fetchMovies();
   }, []);
 
-  // Xóa phim
+  // ✅ Xóa phim
   const handleDelete = async (maPhim) => {
     if (!window.confirm("Bạn có chắc muốn xóa phim này không?")) return;
     try {
@@ -96,9 +96,7 @@ export default function Movies() {
                 <td className="px-4 py-3 text-center ">
                   <div className="inline-flex flex-col sm:flex-row gap-2 justify-center">
                     <button
-                      onClick={() =>
-                        navigate(`/admin/movies/detail/${phim.maPhim}`)
-                      }
+                      onClick={() => navigate(`/admin/movies/${phim.maPhim}`)}
                       className="bg-gray-600 hover:bg-gray-700 px-3 py-1 rounded text-sm"
                     >
                       Chi tiết

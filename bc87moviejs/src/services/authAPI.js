@@ -17,7 +17,7 @@ export const authAPI = {
           },
         }
       );
-      return response.data.content;
+      return response.data.content; // API của CyberSoft trả về dạng { statusCode, content }
     } catch (error) {
       console.error("[authAPI] login error:", error);
       throw error.response?.data?.content || "Đăng nhập thất bại";
