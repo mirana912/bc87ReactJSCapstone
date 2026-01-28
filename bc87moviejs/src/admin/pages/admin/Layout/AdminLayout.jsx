@@ -2,7 +2,7 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logout } from "../../../redux/slices/authSlice";
+import { logout } from "../../../../redux/slices/authSlice";
 
 export default function AdminLayout({ children }) {
   const navigate = useNavigate();

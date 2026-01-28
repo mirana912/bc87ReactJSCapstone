@@ -15,9 +15,9 @@ export const authAPI = {
             TokenCybersoft: TOKEN_CYBERSOFT,
             "Content-Type": "application/json",
           },
-        }
+        },
       );
-      return response.data.content; // API của CyberSoft trả về dạng { statusCode, content }
+      return response.data.content;
     } catch (error) {
       console.error("[authAPI] login error:", error);
       throw error.response?.data?.content || "Đăng nhập thất bại";

@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import Welcome from "./pages/welcome/index";
-import AdminPage from "./pages/admin/index";
-import MovieForm from "./pages/admin/Movies/MovieForm";
-import MovieList from "./pages/admin/Movies/MovieList";
+import Welcome from "./admin/pages/welcome/index";
+import AdminPage from "./admin/pages/admin/index";
+import MovieForm from "./admin/pages/admin/Movies/MovieForm";
+import MovieList from "./admin/pages/admin/Movies/MovieList";
 
 export default function App() {
   return (

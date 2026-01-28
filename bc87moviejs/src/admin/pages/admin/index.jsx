@@ -6,7 +6,7 @@ import AddMovie from "./Movies/AddMovie";
 import MovieDetail from "./Movies/MovieDetail";
 import Users from "./Users/index";
 import AdminLayout from "./Layout/AdminLayout";
-import PrivateRoute from "../../components/routes/PrivateRoute";
+import PrivateRoute from "../../../routes/PrivateRoute";
 
 export default function AdminPage() {
   return (

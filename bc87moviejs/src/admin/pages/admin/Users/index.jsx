@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { userService } from "../../../services/userService";
+import { userService } from "../../../../services/userService";
 import Swal from "sweetalert2";
 
 export default function Users() {
