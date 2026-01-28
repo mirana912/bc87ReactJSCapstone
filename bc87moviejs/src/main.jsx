@@ -6,7 +6,7 @@ import { store } from "./redux/store";
 import App from "./App";
 import "./index.css";
 
-import ClientPage from "./admin/pages/client-page/HomePage";
+import ClientPage from "./client/client-page/HomePage";
 import AdminPage from "./admin/pages/admin/index";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

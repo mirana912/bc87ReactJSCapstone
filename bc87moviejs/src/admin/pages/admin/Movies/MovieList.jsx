@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies, deleteMovie } from "../../../redux/slices/movieSlice";
+import { fetchMovies, deleteMovie } from "../../../../redux/slices/movieSlice";
 import { useNavigate } from "react-router-dom";
 
 export default function MovieList() {

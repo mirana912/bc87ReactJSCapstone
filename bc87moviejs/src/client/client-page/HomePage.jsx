@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { movieAPI } from "../../../services/movieAPI";
-import MovieCard from "../../../admin-component/MovieCard";
+import { movieAPI } from "../../services/movieAPI";
+import MovieCard from "../../admin/admin-component/MovieCard";
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
