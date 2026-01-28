@@ -1,3 +1,4 @@
+// src/services/authAPI.js
 import axios from "axios";
 
 const BASE_URL = "https://movienew.cybersoft.edu.vn/api";
@@ -15,7 +16,7 @@ export const authAPI = {
             TokenCybersoft: TOKEN_CYBERSOFT,
             "Content-Type": "application/json",
           },
-        }
+        },
       );
       return response.data.content; // API của CyberSoft trả về dạng { statusCode, content }
     } catch (error) {

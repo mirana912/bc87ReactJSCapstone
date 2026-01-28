@@ -6,8 +6,8 @@ import { store } from "./redux/store";
 import App from "./App";
 import "./index.css";
 
-import ClientPage from "./pages/client/index";
-import AdminPage from "./pages/admin/index";
+import ClientPage from "./client/client-pages/Home";
+import AdminPage from "./admin/admin-pages/index";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
@@ -18,5 +18,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/admin/*" element={<AdminPage />} />
       </Routes>
     </BrowserRouter>
-  </Provider>
+  </Provider>,
 );

@@ -1,3 +1,4 @@
+// src/redux/slices/authSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { authAPI } from "../../services/authAPI";
 
@@ -10,7 +11,7 @@ export const login = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error);
     }
-  }
+  },
 );
 
 const authSlice = createSlice({

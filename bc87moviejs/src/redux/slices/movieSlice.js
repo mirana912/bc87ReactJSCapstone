@@ -1,3 +1,4 @@
+// src/redux/slices/movieSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -19,7 +20,7 @@ export const deleteMovie = createAsyncThunk(
       headers: { TokenCybersoft: TOKEN_CYBERSOFT },
     });
     return maPhim;
-  }
+  },
 );
 
 const movieSlice = createSlice({
@@ -41,10 +42,11 @@ const movieSlice = createSlice({
       })
       .addCase(deleteMovie.fulfilled, (state, action) => {
         state.list = state.list.filter(
-          (movie) => movie.maPhim !== action.payload
+          (movie) => movie.maPhim !== action.payload,
         );
       });
   },
 });
 
 export default movieSlice.reducer;
+// ==========================================
