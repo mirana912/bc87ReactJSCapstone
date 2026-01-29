@@ -15,7 +15,7 @@ const MoviesGrid = memo(function MoviesGrid() {
   const dispatch = useDispatch();
   const { items } = useSelector((s) => s.movies);
 
-  const itemsMemo = useMemo(() => items, [items]);
+  const itemsMemo = useMemo(() => items ?? [], [items]);
 
   useEffect(() => {
     dispatch(fetchMovies());
