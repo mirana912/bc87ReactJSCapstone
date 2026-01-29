@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/slices/authSlice";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axiosClient from "../../services/axiosClient";
 
 export default function Login() {
   const [taiKhoan, setTaiKhoan] = useState("");
@@ -18,7 +18,7 @@ export default function Login() {
     const result = await dispatch(login({ taiKhoan, matKhau }));
 
     if (login.fulfilled.match(result)) {
-      // ✅ Kiểm tra an toàn cho dữ liệu trả về
+      // Kiểm tra an toàn cho dữ liệu trả về
       const userData =
         result?.payload?.content || result?.payload || result?.user || {};
 
@@ -36,7 +36,7 @@ export default function Login() {
     <div
       className="flex items-center justify-center min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/login-bg.jpg')", // lưu ý: file trong public/images/
+        backgroundImage: "url('../../../public/images/login-bg.jpg')", // lưu ý: file trong public/images/
       }}
     >
       <div className="bg-gray-900/80 p-8 rounded-2xl shadow-2xl w-96 text-white backdrop-blur-sm">
